@@ -6,11 +6,8 @@ const cartList = document.querySelector(".cartList");
 const searchInput = document.querySelector(".search");
 const clearCartButton = document.getElementById("clearCartButton");
 
-// to store all books and filtered books
 let allBooks = [];
 let filteredBooks = [];
-
-// to store the items in the cart
 const cartItems = [];
 
 function updateBooksDisplay(books) {

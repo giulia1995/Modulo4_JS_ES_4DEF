@@ -1,0 +1,18 @@
+body{
+    background-color: cadetblue;
+}
+.card{
+    -webkit-box-shadow: 5px 5px 15px 5px #084D50; 
+    box-shadow: 5px 5px 15px 5px #084D50;
+}
+h1{
+    color: #084D50;
+    font-weight: bolder;
+}
+.btn{
+    background-color: #084D50 !important;
+    border: none !important;
+}
+.navbar-brand{
+    color: #084D50 !important;
+}
