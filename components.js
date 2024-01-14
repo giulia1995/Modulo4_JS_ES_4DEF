@@ -1,14 +1,24 @@
-export function createCard (book){
-    const {title, img, price, category}=book;
-    return `
-    <div class="card" style="width: 18rem;">
-    <img src="${img}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">${title}</h5>
-      <p class="card-text">${category}</p>
-      <p class="card-text">${price}</p>
-      <a href="#" class="btn btn-primary add-button">Add to Cart</a>
-      <a href="#" class="btn btn-primary discard-button">Discard</a>
-    </div>
-  </div>`
-};
+export {createCard, cartElement}
+
+function createCard(book) {
+  const product = book;
+  return `
+    <div class="card m-3" style="width: 18rem;">
+      <img src="${product.img}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${product.title}</h5>
+        <p class="card-text">${product.category}</p>
+        <p class="card-text">${product.price}€</p>
+        <a href="#" class="btn btn-primary add-button" data-book='${JSON.stringify(product)}'>Add to Cart</a>
+        <a href="#" class="btn btn-primary discard-button">Discard</a>
+      </div>
+    </div>`;
+}
+function cartElement(book) {
+  const product = book;
+  return `
+    <li>
+      <h5 class="cart-title">${product.title}</h5>
+      <p class="cart-text">${product.price}€</p>
+    </li>`;
+}

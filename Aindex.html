@@ -39,24 +39,48 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                CART <i class="bi bi-cart-check-fill"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-              </ul>
-            </li>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              CART <i class="bi bi-cart-check-fill carts"></i>
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Your Cart
+                    </h1>
+                    
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body"><ul class="cartList"></ul></div>
+                  <!-- Add this button in your HTML file -->
+<button id="clearCartButton" class="btn btn-danger">Clear Cart</button>
+
+                </div>
+              </div>
+            </div>
           </ul>
           <form class="d-flex" role="search">
             <input
-              class="form-control me-2"
+              class="form-control me-2 search"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -70,7 +94,7 @@
     </nav>
     <!--NAVBAR-->
     <h1 class="text-center mt-5">Find here your Best Book</h1>
-    <div class="container"></div>
+    <div class="container mt-5"></div>
 
     <script type="module" src="./script.js"></script>
     <script

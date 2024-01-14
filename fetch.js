@@ -1,10 +1,10 @@
 export function fetchData() {
     const requestOptions = {
-      method: "GET",
-      redirect: "follow",
+      method: "GET"
     };
-    return fetch(
-      "https://striveschool-api.herokuapp.com/books",
-      requestOptions
-    ).then((response) => response.json());
+    return fetch("https://striveschool-api.herokuapp.com/books", requestOptions)
+      .then((response) => response.json())
+      .catch(function (err) {
+        console.error(err);
+      });
   }
