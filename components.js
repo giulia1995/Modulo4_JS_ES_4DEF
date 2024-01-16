@@ -11,6 +11,7 @@ function createCard(book) {
         <p class="card-text">${product.price}€</p>
         <a href="#" class="btn btn-primary add-button" data-book='${JSON.stringify(product)}'>Add to Cart</a>
         <a href="#" class="btn btn-primary discard-button">Discard</a>
+        <a href="./details.html?q=${book.id}" class="btn btn-warning details-button text-white my-1">Details</a>
       </div>
     </div>`;
 }

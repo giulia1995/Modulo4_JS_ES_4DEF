@@ -1,5 +1,6 @@
 import {createCard, cartElement } from "./components.js"
 import { fetchData } from "./fetch.js";
+export {updateBooksDisplay}
 
 const container = document.querySelector(".container");
 const cartList = document.querySelector(".cartList");
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     allBooks = books;
     updateBooksDisplay(allBooks);
   });
+  
 
   searchInput.addEventListener("input", function () {
     const searchTerm = searchInput.value.trim();

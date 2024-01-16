@@ -9,7 +9,7 @@ h1{
     color: #084D50;
     font-weight: bolder;
 }
-.btn{
+.btn-primary{
     background-color: #084D50 !important;
     border: none !important;
 }
