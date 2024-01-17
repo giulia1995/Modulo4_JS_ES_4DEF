@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-  searchInput.addEventListener("input", function () {
+  searchInput.addEventListener("change", function () {
     const searchTerm = searchInput.value.trim();
     if (searchTerm.length > 2) {
       searchBooks(searchTerm);
